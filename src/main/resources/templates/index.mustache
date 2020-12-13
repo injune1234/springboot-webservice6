@@ -1,0 +1,32 @@
+{{>layout/header}}
+    <h1> 웹프로그래밍 기말고사 </h1>
+
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            </div>
+        </div>
+        <br>
+        <table class="table table-horizontal table-bordered">
+            <thread class="thread-strong">
+                <tr>
+                    <th>아이디</th>
+                    <th>이름</th>
+                    <th>전화번호</th>
+                    <th>주소</th>
+                </tr>
+            </thread>
+            <tbody id="tbody">
+            {{#posts}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{name}}</td>
+                    <td>{{tel}}</td>
+                    <td>{{address}}</td>
+                </tr>
+            {{/posts}}
+            </tbody>
+        </table>
+    </div>
+{{>layout/footer}}
